@@ -23,13 +23,14 @@ public class Main {
         System.out.println("Apellidos: ");
         apellidos = sc.nextLine();
         System.out.println("Asignatura: ");
-        asignat = sc.nextLine();
+        asignatura = sc.nextLine();
         System.out.println("Corte 1: ");
         nota1 = Integer.parseInt(sc.nextLine());
         System.out.println("Corte 2: ");
         nota2 = Integer.parseInt(sc.nextLine());
         System.out.println("Corte 3: ");
         nota3 = Integer.parseInt(sc.nextLine());
+
         est.setCif(cif);
         est.setNombres(nombres);
         est.setApellidos(apellidos);
@@ -37,10 +38,16 @@ public class Main {
         est.setCorte1(nota1);
         est.setCorte2(nota2);
         est.setCorte3(nota3);
-        nf = est.obNotaFinal();
+
+        nf = est.obtNotaFinal();
         System.out.println("Nota final "+ nf);
-        System.out.println(est.e);
-
-
+        if (est.evalNotaFinal().equals("Aprobado.")) {
+            System.out.println("\u001B[34m");
+        } else {
+            System.out.println("\u001B[31m");
+        }
+        System.out.println(est.evalNotaFinal());
+        System.out.println("\u001B[32m");
+        System.out.println(est.evalConvocatoria());
     }
 }

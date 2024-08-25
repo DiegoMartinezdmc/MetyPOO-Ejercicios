@@ -9,6 +9,8 @@ public class Estudiante {
     private int corte2;
     private int corte3;
 
+    public Estudiante() {}
+
     public Estudiante(String cif, String nombres, String apellidos, String asignatura, int corte1, int corte2, int corte3) {
         this.cif = cif;
         this.nombres = nombres;
@@ -75,12 +77,26 @@ public class Estudiante {
         this.corte3 = corte3;
     }
 
-    public int obNotaFinal(){
+    public int obtNotaFinal(){
         return (int) (this.corte1 + this.corte2 + this.corte3)/3;
     }
+    public String evalNotaFinal(){
+        int notaFinal = this.obtNotaFinal();
+        if (notaFinal >= 70 && notaFinal <= 100){
+            return "Aprobado";
+        } else if (notaFinal >= 0 && notaFinal <= 70){
+            return "Reprobado";
+        } else {
+            return "Nota invalida";
+        }
+    }
 
-    pubic String evalNotafinal(){
-        int notaFinal = this.obNotaFinal();
-        if notaFinal >=
+    public String evalConvocatoria(){
+        int notaFinal = this.obtNotaFinal();
+        if (notaFinal >= 60 && notaFinal <= 69){
+            return "Estudiante con derecho a convocatoria";
+        } else {
+            return "Estudiante no tiene derecho a convocatoria";
+        }
     }
 }
