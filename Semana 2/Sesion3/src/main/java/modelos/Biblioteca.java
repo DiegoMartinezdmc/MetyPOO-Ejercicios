@@ -10,32 +10,34 @@ public class Biblioteca {
         libros = new ArrayList<>();
     }
 
-    public void agregarLibro(string titulo){
+    public void agregarLibro(String titulo) {
         libros.add(new Libro(titulo));
     }
 
-    private class libro{
+    private class Libro {  // Cambié de 'libro' a 'Libro'
         private String titulo;
 
-        public libro(){}
-
-        public libro(String titulo){
+        public Libro(String titulo) {
             this.titulo = titulo;
         }
 
         public String getTitulo() {
             return titulo;
         }
+
+        public void setTitulo(String titulo) {
+            this.titulo = titulo;
+        }
     }
 
-    public List<libro> getLibros() {
-        return libro;
+    public List<Libro> getLibros() {
+        return libros;
     }
 
-    public void mostrarLibros(){
+    public void mostrarLibros() {
         System.out.println("Libros disponibles: ");
-        for (Libro libro : libros){
-            System.out.println("-" + libro.getTitulo());
+        for (Libro libro : libros) {
+            System.out.println("- " + libro.getTitulo());
         }
         System.out.println("*".repeat(13));
     }

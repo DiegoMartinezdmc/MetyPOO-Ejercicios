@@ -1,15 +1,13 @@
 package modelos;
 
-public class Profesor {
+public class Animal {
     private String nombre;
 
-    public Profesor() {
-    }
+    public Animal() {}
 
-    public Profesor(String nombre) {
+    public Animal(String nombre) {
         this.nombre = nombre;
     }
-
 
     public String getNombre() {
         return nombre;
@@ -19,8 +17,7 @@ public class Profesor {
         this.nombre = nombre;
     }
 
-    public void ensenarCurso(Curso curso){
-        System.out.println(nombre + " Esta ensenando "
-                + curso.getNombre());
+    public void hacerSonido (){
+        System.out.println("Sonido");
     }
 }
