@@ -1,22 +1,19 @@
 package models;
 
-public class circle {
-
+public class Circle {
     private double radius;
     private double circumference;
     private double area;
 
-    public circle() {
+    public Circle() {}
 
-    }
-
-    public circle(double radius, double circumference, double area) {
+    public Circle(double radius, double circumference, double area) {
         this.radius = radius;
         this.circumference = circumference;
         this.area = area;
     }
 
-    public circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
