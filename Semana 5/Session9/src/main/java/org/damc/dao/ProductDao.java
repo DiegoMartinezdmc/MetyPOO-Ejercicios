@@ -20,7 +20,7 @@ public class ProductDao implements Sesion9 {
     public void findByName(String name) {
         for (Product product : products){
             if (product.getName().equals(name)){
-                System.out.println(product);
+                System.out.println("Product found");
             }
         }
     }

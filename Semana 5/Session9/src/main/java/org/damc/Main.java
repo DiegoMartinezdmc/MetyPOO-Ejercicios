@@ -16,7 +16,7 @@ public class Main {
                 "3. Show students\n" +
                 "4. Exit program\n" +
                 "Enter your choice:";
-        while (option != 4) {
+        while (option != 5) {
             System.out.println(menu);
             option = sc.nextInt();
 
@@ -28,7 +28,6 @@ public class Main {
                     int age = sc.nextInt();
                     System.out.println("Enter the email address of the student: ");
                     String email = sc.next();
-                    Student student = new Student(name, age, email);
                     Student student = new Student(name, age, email);
                     students.store(student);
                     break;
@@ -42,6 +41,9 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("Thank you for using the program!");
+                    break;
+                case 5:
+                    System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Please enter a valid option!");

@@ -40,6 +40,14 @@ public class Student {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                '}';
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -53,17 +61,4 @@ public class Student {
     public int hashCode() {
         return Objects.hash(name, age, email);
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-
-
-
 }
